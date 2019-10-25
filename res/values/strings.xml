@@ -12207,4 +12207,7 @@
     <string name="spiceos_version">SpiceOS Version</string>
     <string name="spiceos_flav">SpiceOS Flavour</string>
 
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Tap to show info</string>
+
 </resources>
