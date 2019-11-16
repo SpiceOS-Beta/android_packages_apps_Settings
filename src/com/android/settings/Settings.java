@@ -243,4 +243,5 @@ public class Settings extends SettingsActivity {
     // SpiceOS Additions.
     public static class SpiceOSSettingsActivity extends SettingsActivity {}
 
+    public static class GamingModeActivity extends SettingsActivity {}
 }

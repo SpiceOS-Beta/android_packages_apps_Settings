@@ -160,6 +160,7 @@ import com.android.settings.wifi.savedaccesspoints.SavedAccessPointsWifiSettings
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 import com.spiceos.settings.SpiceOSSettings;
+import com.spiceos.settings.fragments.misc.GamingMode;
 
 public class SettingsGateway {
 
@@ -310,6 +311,7 @@ public class SettingsGateway {
             InteractAcrossProfilesDetails.class.getName(),
             MediaControlsSettings.class.getName(),
             SpiceOSSettings.class.getName()
+            GamingMode.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -350,5 +352,6 @@ public class SettingsGateway {
             Settings.ModuleLicensesActivity.class.getName(),
             UserBackupSettingsActivity.class.getName(),
             Settings.SpiceOSSettingsActivity.class.getName(),
+            Settings.GamingModeActivity.class.getName(),
     };
 }
