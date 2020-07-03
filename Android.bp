@@ -42,6 +42,7 @@ android_library {
         "com.google.android.material_material",
         "setupcompat",
         "setupdesign",
+        "airbnb-lottie",
         "androidx-constraintlayout_constraintlayout-solver",
         "androidx.lifecycle_lifecycle-runtime",
         "androidx.lifecycle_lifecycle-extensions",
