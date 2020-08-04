@@ -36,6 +36,14 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- SpiceOS Flavour -->
+    <Preference
+        android:key="spiceos_flav"
+        android:title="@string/spiceos_flav"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.SpiceOSVersionPreferenceController"/>
+
     <!-- SpiceOS Android version -->
     <Preference
         android:key="spiceos_version"
