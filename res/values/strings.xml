@@ -12177,5 +12177,6 @@
 
     <!-- SpiceOS Android version -->
     <string name="spiceos_version">SpiceOS Version</string>
-    
+    <string name="spiceos_flav">SpiceOS Flavour</string>
+
 </resources>
