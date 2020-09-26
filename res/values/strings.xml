@@ -12190,4 +12190,8 @@
 
     <!-- Summary for preference when Bedtime mode is on [CHAR LIMIT=NONE] -->
     <string name="aware_summary_when_bedtime_on">Unavailable because bedtime mode is on</string>
+
+    <!-- SpiceOS Android version -->
+    <string name="spiceos_version">SpiceOS Version</string>
+
 </resources>
