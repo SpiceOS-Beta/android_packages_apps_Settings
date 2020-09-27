@@ -22,5 +22,11 @@
     </style>
     <declare-styleable name="Themes">
         <attr name="waveViewStyle" format="reference"/>
-    </declare-styleable>    
+    </declare-styleable>
+
+    <style name="BatteryEntityHeader">
+        <item name="android:background">?android:attr/colorPrimary</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
 </resources>
