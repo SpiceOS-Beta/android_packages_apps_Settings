@@ -64,6 +64,11 @@ android_library {
         "ims-common",
         "app-compat-annotations",
     ],
+
+    resource_dirs: [
+        "spiceos_res",
+        "res",
+    ],
 }
 
 platform_compat_config {
