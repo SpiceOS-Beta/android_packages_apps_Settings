@@ -240,4 +240,7 @@ public class Settings extends SettingsActivity {
      */
     public static class MediaControlsSettingsActivity extends SettingsActivity {}
 
+    // SpiceOS Additions.
+    public static class SpiceOSSettingsActivity extends SettingsActivity {}
+
 }
