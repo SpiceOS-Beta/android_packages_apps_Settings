@@ -32,15 +32,21 @@
     <string name="dev_2">Anush Madathumkara</string>
     <string name="dev_2_git">Anush02198</string>
     <string name="dev2_description">Core Developer</string>
-    <string name="dev_3">Jijin Raj</string>
-    <string name="dev_3_git">G-H-O-5-T</string>
-    <string name="dev3_description">Group Manager</string>
-    <string name="dev_4">Suneesh</string>
-    <string name="dev_4_git">kalmin06</string>
-    <string name="dev4_description">Group Manager</string>
-    <string name="dev_5">Joshua</string>
-    <string name="dev_5_git">axewolf21</string>
+    <string name="dev_3">Aswin A.S</string>
+    <string name="dev_3_git">aswin7469</string>
+    <string name="dev3_description">Core Developer</string>
+    <string name="dev_4">Vivek Achooz</string>
+    <string name="dev_4_git">vivekachooz</string>
+    <string name="dev4_description">Core Developer</string>
+    <string name="dev_5">Jijin Raj</string>
+    <string name="dev_5_git">G-H-O-5-T</string>
     <string name="dev5_description">Group Manager</string>
+    <string name="dev_6">Suneesh</string>
+    <string name="dev_6_git">kalmin06</string>
+    <string name="dev6_description">Group Manager</string>
+    <string name="dev_7">Joshua</string>
+    <string name="dev_7_git">axewolf21</string>
+    <string name="dev7_description">Group Manager</string>
 
     <!-- Mentions -->
     <string name="mentions_header">Honorable Mentions</string>
