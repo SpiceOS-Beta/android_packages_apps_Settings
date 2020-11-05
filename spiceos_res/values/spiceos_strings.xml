@@ -139,4 +139,10 @@
      <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
      <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
 
+     <!-- Quick settings tiles -->
+     <string name="qs_rows_portrait_title">Rows (portrait)</string>
+     <string name="qs_rows_landscape_title">Rows (landscape)</string>
+     <string name="qs_columns_portrait_title">Columns (portrait)</string>
+     <string name="qs_columns_landscape_title">Columns (landscape)</string>
+
 </resources>

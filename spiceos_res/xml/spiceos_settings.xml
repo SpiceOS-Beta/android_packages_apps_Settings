@@ -58,13 +58,13 @@
             android:fragment="com.spiceos.settings.fragments.StatusbarSettings"
             android:icon="@drawable/ic_settings_statusbar"/>
 
-        <!-- Quick Settings panel
+        <!-- Quick Settings panel -->
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="quicksettings_category"
             android:title="@string/quicksettings_title"
             android:summary="@string/quicksettings_summary"
             android:fragment="com.spiceos.settings.fragments.QuickSettings"
-            android:icon="@drawable/ic_settings_quicksettings"/>-->
+            android:icon="@drawable/ic_settings_quicksettings"/>
 
         <!-- Gestures
         <com.spiceos.settings.preferences.CardviewPreference
