@@ -17,4 +17,10 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+  <!-- DbFuzz adds it's value in pixels to the magnitude
+       It is recommended to set this value so that it is
+       less than config_pulsePathEffect_1, measured in pixels
+       This allows for the first block in PathEffect to fade -->
+  <integer name="config_pulseDbFuzz">2</integer>
+
 </resources>
