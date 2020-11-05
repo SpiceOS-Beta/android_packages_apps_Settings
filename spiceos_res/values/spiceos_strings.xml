@@ -113,4 +113,18 @@
     <string name="bluetooth_battery_title">Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Display battery status for the connected bluetooth device, if available</string>
 
+    <!--VoLTE Icon Switch-->
+     <string name="volte_icon_title">VoLTE icon</string>
+     <string name="status_bar_volte_disabled">Disabled</string>
+     <string name="status_bar_volte_style_1">Bliss Style</string>
+     <string name="status_bar_volte_style_2">Sony</string>
+     <string name="status_bar_volte_style_3">Pill shape</string>
+     <string name="status_bar_volte_style_4">Square 2 tone</string>
+     <string name="status_bar_volte_style_5">Oneplus</string>
+     <string name="status_bar_volte_style_6">Notch friendly</string>
+     <string name="status_bar_volte_style_7">Just an Icon</string>
+     <string name="status_bar_volte_style_8">EMUI</string>
+     <string name="status_bar_volte_style_9">Oneplus Compact</string>
+     <string name="status_bar_volte_style_10">Spice Volte</string>
+
 </resources>
