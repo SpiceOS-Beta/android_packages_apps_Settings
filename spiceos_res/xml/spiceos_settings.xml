@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright © 2020 MalluOS Project
+    Copyright © 2020 SpiceOS Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -35,14 +35,14 @@
     <PreferenceCategory
             android:key="features"
             android:title="SpiceOS Features" >
- 
-        <com.spiceos.settings.preferences.CardviewPreference
+
+        <!--<com.spiceos.settings.preferences.CardviewPreference
             android:key="dummy"
             android:icon="@drawable/ic_settings_powermenu"
             android:title="Nothing for Now"
-            android:summary="Coming soon"/>
+            android:summary="Coming soon"/>-->
 
-        <!-- Gaming Mode 
+        <!-- Gaming Mode
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="gaming_mode"
             android:icon="@drawable/ic_gaming"
@@ -50,23 +50,23 @@
             android:summary="@string/gaming_mode_summary"
             android:fragment="com.spiceos.settings.fragments.misc.GamingMode"/>-->
 
-        <!-- Status Bar 
+        <!-- Status Bar -->
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
             android:summary="@string/statusbar_summary"
             android:fragment="com.spiceos.settings.fragments.StatusbarSettings"
-            android:icon="@drawable/ic_settings_statusbar"/>-->
+            android:icon="@drawable/ic_settings_statusbar"/>
 
-        <!-- Quick Settings panel 
+        <!-- Quick Settings panel
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="quicksettings_category"
             android:title="@string/quicksettings_title"
             android:summary="@string/quicksettings_summary"
             android:fragment="com.spiceos.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>-->
-			
-        <!-- Gestures 
+
+        <!-- Gestures
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="gestures_category"
             android:title="@string/gestures_title"
@@ -74,7 +74,7 @@
             android:fragment="com.spiceos.settings.fragments.GestureSettings"
             android:icon="@drawable/ic_settings_gestures"/>-->
 
-        <!-- Lock Screen 
+        <!-- Lock Screen
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title"
@@ -82,7 +82,7 @@
             android:fragment="com.spiceos.settings.fragments.LockscreenSettings"
             android:icon="@drawable/ic_settings_lockscreen"/>-->
 
-        <!-- Power Menu 
+        <!-- Power Menu
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="powermenu__category"
             android:title="@string/powermenu_title"
@@ -90,7 +90,7 @@
             android:fragment="com.spiceos.settings.fragments.PowermenuSettings"
             android:icon="@drawable/ic_settings_powermenu"/>-->
 
-        <!-- Navigation panel 
+        <!-- Navigation panel
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="navigation_category"
             android:title="@string/nav_title"
@@ -106,7 +106,7 @@
             android:fragment="com.spiceos.settings.fragments.NotificationSettings"
             android:icon="@drawable/ic_settings_notifications"/> -->
 
-        <!-- Misc 
+        <!-- Misc
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="misc_category"
             android:title="@string/misc_title"
