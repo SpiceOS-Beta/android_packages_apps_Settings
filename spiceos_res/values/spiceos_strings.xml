@@ -127,4 +127,8 @@
      <string name="status_bar_volte_style_9">Oneplus Compact</string>
      <string name="status_bar_volte_style_10">Spice Volte</string>
 
+     <!-- Roaming indicator icon -->
+     <string name="roaming_indicator_icon_title">Roaming indicator</string>
+     <string name="roaming_indicator_icon_summary">Display roaming indicator in signal icon when in roaming mode</string>
+     
 </resources>
