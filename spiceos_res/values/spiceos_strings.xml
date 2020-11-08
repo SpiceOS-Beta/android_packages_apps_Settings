@@ -164,5 +164,9 @@
       <!-- QS Lock Icon -->
       <string name="lockscreen_lock_icon_title">Lock icon</string>
       <string name="lockscreen_lock_icon_summary">Display lock icon on the lockscreen</string>
+
+      <!-- Quick settings haptic feedback -->
+      <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+      <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
       
 </resources>
