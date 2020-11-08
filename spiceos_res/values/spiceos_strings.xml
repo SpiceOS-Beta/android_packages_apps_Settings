@@ -149,4 +149,14 @@
      <string name="qs_tile_title_visibility_title">Tile title</string>
      <string name="qs_tile_title_visibility_summary">Display title below each tile</string>
 
+     <!-- VoWiFi icon -->
+      <string name="vowifi_icon_title">VoWiFi icon style</string>
+      <string name="vowifi_icon_summary">Display VoWiFi icon when available</string>
+      <string name="vowifi_icon_disabled">Disabled</string>
+      <string name="vowifi_icon_default">Oneplus</string>
+      <string name="vowifi_icon_moto">Motorola</string>
+      <string name="vowifi_icon_asus">Asus</string>
+      <string name="vowifi_icon_emui">Emui</string>
+      <string name="vowifi_icon_oneplus_compact">Oneplus Compact</string>
+
 </resources>
