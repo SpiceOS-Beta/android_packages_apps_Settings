@@ -158,5 +158,7 @@
       <string name="vowifi_icon_asus">Asus</string>
       <string name="vowifi_icon_emui">Emui</string>
       <string name="vowifi_icon_oneplus_compact">Oneplus Compact</string>
+      <string name="volte_vowifi_override_title">VoWiFi override</string>
+      <string name="volte_vowifi_override_summary">Hide VoLTE when VoWiFi is available. This also overrides old style signal icon for VoWiFi.</string>
 
 </resources>
