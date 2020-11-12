@@ -17,6 +17,6 @@
 <resources>
 
     <!-- SpiceOSSettings Color -->
-    <color name="homepage_spiceos_background">#FF7E0F</color>
+    <color name="homepage_spiceos_background">#686767</color>
 
 </resources>
