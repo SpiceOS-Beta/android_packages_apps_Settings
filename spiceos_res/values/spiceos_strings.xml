@@ -41,12 +41,15 @@
     <string name="dev_5">Jijin Raj</string>
     <string name="dev_5_git">G-H-O-5-T</string>
     <string name="dev5_description">Group Manager</string>
-    <string name="dev_6">Suneesh</string>
-    <string name="dev_6_git">kalmin06</string>
-    <string name="dev6_description">Group Manager</string>
-    <string name="dev_7">Joshua</string>
-    <string name="dev_7_git">axewolf21</string>
+    <string name="dev_6">Teenu Kumar</string>
+    <string name="dev_6_git">teenukumar123</string>
+    <string name="dev6_description">Designer</string>
+    <string name="dev_7">Suneesh</string>
+    <string name="dev_7_git">kalmin06</string>
     <string name="dev7_description">Group Manager</string>
+    <string name="dev_8">Joshua</string>
+    <string name="dev_8_git">axewolf21</string>
+    <string name="dev8_description">Group Manager</string>
 
     <!-- Mentions -->
     <string name="mentions_header">Honorable Mentions</string>
@@ -168,5 +171,5 @@
       <!-- Quick settings haptic feedback -->
       <string name="quick_settings_vibrate_title">Vibrate on touch</string>
       <string name="quick_settings_vibrate_summary">Vibrate when touching tiles</string>
-      
+
 </resources>
