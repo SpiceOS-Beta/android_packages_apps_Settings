@@ -19,7 +19,7 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="SpiceOS">
-		
+
 <!-- Header -->
 <Preference android:key="spiceos_logo"
               android:enabled="false"
@@ -30,7 +30,7 @@
               android:title="@string/spiceos_about_info_summary_title" >
 
         <Preference
-              android:summary="@string/spiceos_about_info_summary" 
+              android:summary="@string/spiceos_about_info_summary"
               android:icon="@drawable/ic_devs_info" >
         <intent
               android:action="android.intent.action.VIEW"
@@ -69,7 +69,7 @@
             android:summary="@string/dev3_description" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/G_H_O_S_7" />
+            android:data="https://t.me/aswin_a_s" />
         </Preference>
 
         <Preference
@@ -79,7 +79,7 @@
             android:summary="@string/dev4_description" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/kalmin06" />
+            android:data="https://t.me/vivekachooz" />
         </Preference>
 
         <Preference
@@ -87,6 +87,36 @@
             android:title="@string/dev_5"
             android:icon="@drawable/ic_code"
             android:summary="@string/dev5_description" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/GhosTriX" />
+        </Preference>
+
+        <Preference
+            android:key="dev6"
+            android:title="@string/dev_6"
+            android:icon="@drawable/ic_code"
+            android:summary="@string/dev6_description" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/TdotK" />
+        </Preference>
+
+        <Preference
+            android:key="dev7"
+            android:title="@string/dev_7"
+            android:icon="@drawable/ic_code"
+            android:summary="@string/dev7_description" >
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/kalmin06" />
+        </Preference>
+
+        <Preference
+            android:key="dev8"
+            android:title="@string/dev_8"
+            android:icon="@drawable/ic_code"
+            android:summary="@string/dev8_description" >
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/Axewolf21" />
@@ -123,21 +153,21 @@
         </Preference>
 
         <Preference
-            android:title="@string/device_jasmine_sprout" 
-            android:summary="@string/device_jasmine_sprout_description" 
-            android:icon="@drawable/ic_devs_phone"> 
-	<intent 
-            android:action="android.intent.action.VIEW" 
-            android:data="https://t.me/Anush02198" /> 
+            android:title="@string/device_jasmine_sprout"
+            android:summary="@string/device_jasmine_sprout_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/Anush02198" />
         </Preference>
 
         <Preference
-            android:title="@string/device_osprey" 
-            android:summary="@string/device_osprey_description" 
-            android:icon="@drawable/ic_devs_phone"> 
-	<intent 
-            android:action="android.intent.action.VIEW" 
-            android:data="https://t.me/althafvly" /> 
+            android:title="@string/device_osprey"
+            android:summary="@string/device_osprey_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/althafvly" />
         </Preference>
 
 </PreferenceCategory>
