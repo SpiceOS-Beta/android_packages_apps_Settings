@@ -33,7 +33,7 @@ import android.view.ViewGroup;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
-
+import com.spiceos.settings.fragments.quicksettings.CustomHeader;
 import com.android.settings.R;
 
 public class QuickSettings extends SettingsPreferenceFragment implements

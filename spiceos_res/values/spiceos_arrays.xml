@@ -44,4 +44,35 @@
        <item>10</item>
    </string-array>
 
+   <!-- VoWiFi icon style -->
+   <string-array name="vowifi_icon_style_entries" translatable="false">
+       <item>@string/vowifi_icon_disabled</item>
+       <item>@string/vowifi_icon_default</item>
+       <item>@string/vowifi_icon_moto</item>
+       <item>@string/vowifi_icon_asus</item>
+       <item>@string/vowifi_icon_emui</item>
+       <item>@string/vowifi_icon_oneplus_compact</item>
+   </string-array>
+   <string-array name="vowifi_icon_style_values" translatable="false">
+       <item>0</item>
+       <item>1</item>
+       <item>2</item>
+       <item>3</item>
+       <item>4</item>
+       <item>5</item>
+   </string-array>
+
+   <!-- Header options -->
+   <string-array name="custom_header_provider_entries" translatable="false">
+       <item>@string/daylight_header_provider_title</item>
+       <item>@string/static_header_provider_title</item>
+       <item>@string/file_header_provider_title</item>
+   </string-array>
+
+   <string-array name="custom_header_provider_values" translatable="false">
+       <item>@string/daylight_header_provider</item>
+       <item>@string/static_header_provider</item>
+       <item>@string/file_header_provider</item>
+   </string-array>
+
 </resources>
