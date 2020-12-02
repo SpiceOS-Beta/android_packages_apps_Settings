@@ -66,4 +66,12 @@
         android:summary="@string/quick_settings_vibrate_summary"
         android:defaultValue="false"/>
 
+    <!-- Custom header -->
+    <Preference
+        android:key="custom_header"
+        android:icon="@drawable/ic_header"
+        android:fragment="com.spiceos.settings.fragments.quicksettings.CustomHeader"
+        android:title="@string/custom_header_title"
+        android:summary="@string/custom_header_summary" />
+
 </PreferenceScreen>
