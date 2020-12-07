@@ -66,6 +66,10 @@
     <string name="device_jasmine_sprout_description">jasmine_sprout\nAnush02198</string>
     <string name="device_osprey">Moto G 2015</string>
     <string name="device_osprey_description">osprey\nalthafvly</string>
+    <string name="device_wayne">Mi 6X</string>
+    <string name="device_wayne_description">wayne\nAnush02198</string>
+    <string name="device_lavander">Redmi Note 7</string>
+    <string name="device_lavander_description">lavander\nCHRISL7</string>
 
     <!-- Categories -->
     <string name="gestures_title">Gestures</string>

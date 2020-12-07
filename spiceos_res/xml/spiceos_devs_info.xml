@@ -170,6 +170,24 @@
             android:data="https://t.me/althafvly" />
         </Preference>
 
+        <Preference
+            android:title="@string/device_wayne"
+            android:summary="@string/device_wayne_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/Anush02198" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_lavander"
+            android:summary="@string/device_lavander_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/CHRISL7" />
+        </Preference>
+
 </PreferenceCategory>
 
 <PreferenceCategory
