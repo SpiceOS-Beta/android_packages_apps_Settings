@@ -66,13 +66,13 @@
             android:fragment="com.spiceos.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
-        <!-- Gestures
+        <!-- Gestures -->
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="gestures_category"
             android:title="@string/gestures_title"
             android:summary="@string/gestures_summary"
             android:fragment="com.spiceos.settings.fragments.GestureSettings"
-            android:icon="@drawable/ic_settings_gestures"/>-->
+            android:icon="@drawable/ic_settings_gestures"/>
 
         <!-- Lock Screen -->
         <com.spiceos.settings.preferences.CardviewPreference
