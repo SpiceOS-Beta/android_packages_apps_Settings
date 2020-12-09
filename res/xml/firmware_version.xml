@@ -21,6 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- SpiceOS logo -->
+    <PreferenceScreen
+        android:key="spiceos_lottie_animation"
+        android:layout="@layout/spiceos_lottie_animation"
+        android:selectable="false" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
