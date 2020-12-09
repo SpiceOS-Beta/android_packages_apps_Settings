@@ -23,8 +23,8 @@
 
     <!-- SpiceOS logo -->
     <PreferenceScreen
-        android:layout="@layout/spiceos_logo"
-        android:key="spiceos_logo"
+        android:key="spiceos_lottie_animation"
+        android:layout="@layout/spiceos_lottie_animation"
         android:selectable="false" />
 
     <!-- Android version -->
