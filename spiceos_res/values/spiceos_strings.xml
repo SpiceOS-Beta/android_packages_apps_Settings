@@ -82,6 +82,8 @@
     <string name="powermenu_summary">Death sentences</string>
     <string name="quicksettings_title">Quick Settings</string>
     <string name="quicksettings_summary">Customize QS</string>
+    <string name="interface_title">Interface Themes</string>
+    <string name="interface_summary_title">Theme your Interface even more,Just for more Spice ;)</string>
     <string name="nav_title">Navigation Settings</string>
     <string name="nav_summary">Make navigation look cool</string>
     <string name="statusbar_title">Status Bar</string>
@@ -229,5 +231,14 @@
       <!--QS tint toggle-->
       <string name="qs_bg_use_new_tint">QS tint toggle</string>
       <string name="qs_bg_use_new_tint_summary">Use accent color for qs tile icons and background (Requires systemui reboot)</string>
+
+      <!-- Themes -->
+      <string name="theme_type_title">SpiceOS themes</string>
+      <string name="theme_type_summary">Select theme</string>
+      <string name="theme_type_light">Light</string>
+      <string name="theme_type_pitch_black">Pitch black</string>
+      <string name="theme_type_solarized_dark">Solarized dark</string>
+      <string name="theme_type_baked_green">Baked Green</string>
+      <string name="theme_type_choco_x">Choco Colt</string>
 
 </resources>
