@@ -20,9 +20,17 @@
     <!-- Three-fingers-swipe to screenshot -->
     <lineageos.preference.LineageSecureSettingSwitchPreference
         android:key="advanced_reboot"
-        android:icon="@drawable/ic_restart"        
+        android:icon="@drawable/ic_restart"
         android:title="@string/advanced_reboot_title"
         android:summary="@string/advanced_reboot_summary"
         android:defaultValue="false" />
+
+    <!-- Volume Steps -->
+    <PreferenceScreen
+        android:key="volume_steps"
+        android:icon="@drawable/ic_settings_sound"
+        android:title="@string/volume_steps_title"
+        android:summary="@string/volume_steps_summary"
+        android:fragment="com.spiceos.settings.fragments.sound.VolumeSteps" />
 
 </PreferenceScreen>
