@@ -31,4 +31,12 @@
         android:summary="@string/back_gesture_arrow_summary"
         android:defaultValue="true" />
 
+    <!-- Volume Steps -->
+    <PreferenceScreen
+        android:key="volume_steps"
+        android:icon="@drawable/ic_settings_sound"
+        android:title="@string/volume_steps_title"
+        android:summary="@string/volume_steps_summary"
+        android:fragment="com.spiceos.settings.fragments.sound.VolumeSteps" />
+
 </PreferenceScreen>
