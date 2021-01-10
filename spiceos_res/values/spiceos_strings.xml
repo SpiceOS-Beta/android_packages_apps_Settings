@@ -314,5 +314,9 @@
       <!-- Old mobiletype icon style -->
       <string name="old_mobiletype_title">Old style signal icon</string>
       <string name="old_mobiletype_summary">Merge signal and signal type icons</string>
+      
+      <!-- Back gesture animation -->
+      <string name="back_gesture_arrow_message">Back gesture animation</string>
+      <string name="back_gesture_arrow_summary">Show an animated arrow for back gesture.</string>
 
 </resources>

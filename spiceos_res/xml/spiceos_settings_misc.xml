@@ -60,4 +60,10 @@
         android:summary="@string/gaming_mode_summary"
         android:fragment="com.spiceos.settings.fragments.misc.GamingMode"/>
 
+    <com.spiceos.settings.preferences.SecureSettingSwitchPreference
+        android:key="show_back_arrow_gesture"
+        android:title="@string/back_gesture_arrow_message"
+        android:summary="@string/back_gesture_arrow_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
