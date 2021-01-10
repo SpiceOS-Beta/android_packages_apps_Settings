@@ -310,7 +310,7 @@ public class SettingsGateway {
             InteractAcrossProfilesSettings.class.getName(),
             InteractAcrossProfilesDetails.class.getName(),
             MediaControlsSettings.class.getName(),
-            SpiceOSSettings.class.getName()
+            SpiceOSSettings.class.getName(),
             GamingMode.class.getName(),
     };
 
