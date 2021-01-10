@@ -84,6 +84,7 @@
     <string name="statusbar_summary">Customize statusbar</string>
     <string name="notifications_title">Notifications</string>
     <string name="notifications_summary">Cool Notification stuff</string>
+    <string name="spice_it_up">#spiceItUp\ntweak your happiness</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
