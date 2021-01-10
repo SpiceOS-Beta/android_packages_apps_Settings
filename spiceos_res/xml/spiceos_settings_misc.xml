@@ -58,4 +58,12 @@
         settings:units="@string/unit_seconds"
         android:dependency="adaptive_playback_enabled" />
 
+    <!-- Gaming Mode -->
+    <Preference
+        android:key="gaming_mode"
+        android:icon="@drawable/ic_gaming"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        android:fragment="com.spiceos.settings.fragments.misc.GamingMode"/>
+
 </PreferenceScreen>
