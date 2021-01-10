@@ -66,4 +66,11 @@
         android:summary="@string/gaming_mode_summary"
         android:fragment="com.spiceos.settings.fragments.misc.GamingMode"/>
 
+    <!-- Hardware Key Disable -->
+    <com.spiceos.settings.preferences.SecureSettingSwitchPreference
+        android:key="hardware_keys_disable"
+        android:icon="@drawable/ic_buttons"
+        android:title="@string/hwkeys_disabled_title"
+        android:summary="@string/hwkeys_disabled_summary" />
+
 </PreferenceScreen>
