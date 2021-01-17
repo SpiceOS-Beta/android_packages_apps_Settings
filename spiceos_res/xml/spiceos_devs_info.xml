@@ -109,7 +109,7 @@
             android:summary="@string/dev7_description" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/kalmin06" />
+            android:data="https://t.me/samirkushwaha" />
         </Preference>
 
         <Preference
@@ -119,7 +119,7 @@
             android:summary="@string/dev8_description" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/Axewolf21" />
+            android:data="https://t.me/kalmin06" />
         </Preference>
 
 </PreferenceCategory>
@@ -152,6 +152,55 @@
             android:data="https://www.github.com/SpiceOS-Devices" />
         </Preference>
 
+        <!--Motorola-->
+        <Preference
+            android:title="@string/device_osprey"
+            android:summary="@string/device_osprey_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/althafvly" />
+        </Preference>
+
+        <!--POCO-->
+        <Preference
+            android:title="@string/device_beryllium"
+            android:summary="@string/device_beryllium_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/althafvly" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_miatoll"
+            android:summary="@string/device_miatoll_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/TeamBlackListed" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_surya"
+            android:summary="@string/device_surya_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/AtlanPrime" />
+        </Preference>
+
+        <!--Redmi-->
+        <Preference
+            android:title="@string/device_begonia"
+            android:summary="@string/device_begonia_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/SahilSonar" />
+        </Preference>
+
+        <!--Xiaomi -->
         <Preference
             android:title="@string/device_jasmine_sprout"
             android:summary="@string/device_jasmine_sprout_description"
@@ -162,15 +211,6 @@
         </Preference>
 
         <Preference
-            android:title="@string/device_osprey"
-            android:summary="@string/device_osprey_description"
-            android:icon="@drawable/ic_devs_phone">
-	<intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/althafvly" />
-        </Preference>
-
-        <Preference
             android:title="@string/device_wayne"
             android:summary="@string/device_wayne_description"
             android:icon="@drawable/ic_devs_phone">
@@ -178,21 +218,6 @@
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/Anush02198" />
         </Preference>
-
-        <Preference
-            android:title="@string/device_lavander"
-            android:summary="@string/device_lavander_description"
-            android:icon="@drawable/ic_devs_phone">
-	<intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/CHRISL7" />
-        </Preference>
-
-</PreferenceCategory>
-
-<PreferenceCategory
-            android:key="co_maintainer"
-            android:title="@string/co_maintainers_header" >
 
 </PreferenceCategory>
 
