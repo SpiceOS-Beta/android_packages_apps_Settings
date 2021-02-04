@@ -12223,4 +12223,8 @@
     <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Tap to show info</string>
 
+    <!-- Strings For Settigns-->
+    <string name="greeting">Good Night</string>
+    <string name="random_username">User</string>
+
 </resources>

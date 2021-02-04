@@ -1502,4 +1502,28 @@
         <item>@string/rtt_settings_always_visible</item>
     </string-array>
 
+   <!-- Random UserNames For Settings -->
+    <string-array name="random_user_names">
+    <item>Chief</item>
+    <item>BOOMER</item>
+    <item>Agent 47</item>
+    <item>Mario</item>
+    <item>Rocky Bhai</item>
+    <item>Captain Jack Sparrow</item>
+    <item>Iron Man</item>
+    <item>Batman</item>
+    <item>James Bond</item>
+    <item>Jon Snow</item>
+    <item>Terminator</item>
+    <item>Bootstrap Bill Turner</item>
+    <item>Man With No Name</item>
+    <item>Scooby-Doo</item>
+    <item>Godfather</item>
+    <item>Harry Potter</item>
+    <item>Albus Dumbledore</item>
+    <item>Johnny Bravo</item>
+    <item>Pikachu</item>
+    <item>Mr.Mime</item>
+</string-array>
+
 </resources>
