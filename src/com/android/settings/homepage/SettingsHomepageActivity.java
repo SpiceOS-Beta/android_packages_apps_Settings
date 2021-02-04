@@ -16,6 +16,7 @@
 
 package com.android.settings.homepage;
 
+import android.content.res.Resources;
 import android.animation.LayoutTransition;
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
@@ -25,6 +26,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.provider.Settings;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import androidx.annotation.VisibleForTesting;
@@ -39,6 +41,9 @@ import com.android.settings.core.HideNonSystemOverlayMixin;
 import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 
+import java.util.Calendar;
+import java.util.Random;
+
 public class SettingsHomepageActivity extends FragmentActivity {
 
     View homepageSpacer;
@@ -51,9 +56,11 @@ public class SettingsHomepageActivity extends FragmentActivity {
         setContentView(R.layout.settings_homepage_container);
         final View root = findViewById(R.id.settings_homepage_container);
         root.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN );
 
         setHomepageContainerPaddingTop();
+        getRandomName();
+        goodVibesPlease();
 
         final Toolbar toolbar = findViewById(R.id.search_action_bar);
         FeatureFactory.getFactory(this).getSearchFeatureProvider()
@@ -78,6 +85,13 @@ public class SettingsHomepageActivity extends FragmentActivity {
             homepageSpacer.setVisibility(View.GONE);
             setMargins(homepageMainLayout, 0,0,0,0);
        }
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        goodVibesPlease();
     }
 
     private void showFragment(Fragment fragment, int id) {
@@ -105,6 +119,50 @@ public class SettingsHomepageActivity extends FragmentActivity {
             v.requestLayout();
         }
     }
+
+    private void getRandomName(){
+    Resources res = getResources();
+    String[] array = res.getStringArray(R.array.random_user_names);
+    String randomName = array[new Random().nextInt(array.length)];
+    TextView homepageUsernameTextView=(TextView) findViewById(R.id.userNameTextView);
+    homepageUsernameTextView.setText(randomName);
+}
+
+private void goodVibesPlease(){
+
+     Calendar c = Calendar.getInstance();
+     int hours = c.get(Calendar.HOUR_OF_DAY);
+     String greeting=null;
+     TextView homePageGreetingTextView=(TextView) findViewById(R.id.greetingsTextView);
+     View root = findViewById(R.id.settings_homepage_container);
+
+     if(hours>=0 && hours<=11){
+         greeting = "Good Morning";
+
+           root.setBackground(getResources().getDrawable(R.drawable.background_morning));
+     } else if(hours>=12 && hours<=15){
+
+         greeting = "Good AfterNoon";
+         root.setBackground(getResources().getDrawable(R.drawable.background_noon));
+
+     } else if(hours>=16 && hours<=20){
+
+         greeting = "Good Evening";
+         root.setBackground(getResources().getDrawable(R.drawable.background_evening));
+
+     } else if(hours>=21 && hours<=24){
+
+         greeting = "Good Night";
+         root.setBackground(getResources().getDrawable(R.drawable.background_night));
+
+     } else {
+         greeting = "Welcome To Earth";
+         root.setBackground(getResources().getDrawable(R.drawable.background_ufo));
+     }
+
+     homePageGreetingTextView.setText(greeting);
+
+ }
 
     @VisibleForTesting
     void setHomepageContainerPaddingTop() {

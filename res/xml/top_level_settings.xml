@@ -181,4 +181,6 @@
         android:order="100"
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
 
+     <Preference android:layout="@layout/divider" android:order="-5"/>
+
 </PreferenceScreen>

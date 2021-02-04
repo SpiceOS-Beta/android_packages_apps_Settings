@@ -17,38 +17,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/settings_homepage_spacer"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/homepage_spacer_height"
+    android:layout_height="300dp"
     android:outlineProvider="none"
-    app:cardBackgroundColor="?android:attr/colorPrimary"
+    app:cardBackgroundColor="#00000000"
     app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
 
     <TextView
+      android:id="@+id/greetingsTextView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textAppearance="@style/homepage_spacer_title_style"
-        android:layout_gravity="top|left"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="@dimen/homepage_spacer_title_marginTop"
-        android:text="@string/settings_label" />
+        android:text="Good Morning"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#ffffff"/>
 
-<com.google.android.material.card.MaterialCardView                                    
+    <TextView
+      android:id="@+id/userNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
+
+<com.google.android.material.card.MaterialCardView
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:id="@+id/search_bar"                                                         
-  android:layout_width="42dp"                                                          
-  android:layout_height="42dp"                                         
+  android:id="@+id/search_bar"
+  android:layout_width="42dp"
+  android:layout_height="42dp"
   android:layout_marginRight="15dp"
   android:layout_centerVertical="true"
   android:layout_gravity="bottom|end"
   style="@style/SearchBarStyle">
   <Toolbar
    android:layout_gravity="center"
-   android:id="@+id/search_action_bar"                                                 
-   android:background="?android:attr/colorPrimary"                                     
-   android:layout_width="42dp"                                                         
-   android:layout_height="42dp"                                                                                                      
-   android:navigationIcon="@drawable/ic_homepage_search"                               
+   android:id="@+id/search_action_bar"
+   android:layout_width="42dp"
+   android:layout_height="42dp"
+   android:navigationIcon="@drawable/ic_homepage_search"
    android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset">
   </Toolbar>
  </com.google.android.material.card.MaterialCardView>
-</com.google.android.material.card.MaterialCardView>
+ </com.google.android.material.card.MaterialCardView>
