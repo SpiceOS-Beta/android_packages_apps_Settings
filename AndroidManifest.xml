@@ -107,6 +107,10 @@
     <uses-permission android:name="android.permission.READ_DREAM_STATE" />
     <uses-permission android:name="android.permission.READ_DREAM_SUPPRESSION" />
 
+    <!-- Face Unlock -->
+    <uses-permission android:name="com.android.settings.FACE_UNLOCK"/>
+    <permission android:name="com.android.settings.FACE_UNLOCK" android:protectionLevel="signatureOrSystem"/>
+
     <application android:label="@string/settings_label"
             android:icon="@drawable/ic_launcher_settings"
             android:theme="@style/Theme.Settings"
@@ -3442,6 +3446,17 @@
                 <action android:name="android.intent.action.GAMING_MODE_TURN_ON" />
             </intent-filter>
         </receiver>
+
+        <!-- Face unlock -->
+        <activity android:name="com.android.settings.custom.biometrics.face.FaceEnrollActivity"
+            android:permission="com.android.settings.FACE_UNLOCK"
+            android:theme="@style/Transparent">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.intent.action.FACE_ENROLL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
         <activity android:name=".Settings$GamingModeActivity"
             android:label="@string/gaming_mode_title"
             android:taskAffinity="com.android.settings"
