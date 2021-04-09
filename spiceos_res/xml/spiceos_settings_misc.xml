@@ -20,9 +20,15 @@
     <!-- Three-fingers-swipe to screenshot -->
     <lineageos.preference.LineageSecureSettingSwitchPreference
         android:key="advanced_reboot"
-        android:icon="@drawable/ic_restart"        
+        android:icon="@drawable/ic_restart"
         android:title="@string/advanced_reboot_title"
         android:summary="@string/advanced_reboot_summary"
         android:defaultValue="false" />
+
+    <com.spiceos.settings.preferences.SecureSettingSwitchPreference
+        android:key="show_back_arrow_gesture"
+        android:title="@string/back_gesture_arrow_message"
+        android:summary="@string/back_gesture_arrow_summary"
+        android:defaultValue="true" />
 
 </PreferenceScreen>
