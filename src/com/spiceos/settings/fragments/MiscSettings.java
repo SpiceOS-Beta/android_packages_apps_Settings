@@ -28,16 +28,25 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.view.LayoutInflater;
+import android.widget.ListView;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
-
+import com.android.settingslib.search.SearchIndexable;
+import com.android.settings.search.BaseSearchIndexProvider;
+import java.util.List;
+import java.util.ArrayList;
 import com.android.settings.R;
+import com.spiceos.settings.fragments.misc.SmartCharging;
 
+@SearchIndexable
 public class MiscSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String SMART_CHARGING = "smart_charging";
+    private Preference mSmartCharging;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +54,13 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.spiceos_settings_misc);
         ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        final Resources res = getResources();
+
+        mSmartCharging = (Preference) prefScreen.findPreference(SMART_CHARGING);
+    boolean mSmartChargingSupported = res.getBoolean(
+        com.android.internal.R.bool.config_smartChargingAvailable);
+    if (!mSmartChargingSupported)
+        prefScreen.removePreference(mSmartCharging);
     }
 
     @Override
@@ -65,4 +81,19 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.spiceos_settings_misc) {
+    @Override
+    public List<String> getNonIndexableKeys(Context context) {
+    List<String> keys = super.getNonIndexableKeys(context);
+    final Resources res = context.getResources();
+
+    boolean mSmartChargingSupported = res.getBoolean(
+            com.android.internal.R.bool.config_smartChargingAvailable);
+    if (!mSmartChargingSupported)
+        keys.add(SMART_CHARGING);
+          return keys;
+      }
+};
 }
