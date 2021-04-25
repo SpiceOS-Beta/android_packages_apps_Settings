@@ -25,6 +25,14 @@
         android:summary="@string/advanced_reboot_summary"
         android:defaultValue="false" />
 
+    <!-- Smart Charging -->
+    <Preference
+        android:key="smart_charging"
+        android:icon="@drawable/ic_battery_charging_80"
+        android:title="@string/smart_charging_title"
+        android:summary="@string/smart_charging_summary"
+        android:fragment="com.spiceos.settings.fragments.misc.SmartCharging"/>
+
     <com.spiceos.settings.preferences.SecureSettingSwitchPreference
         android:key="show_back_arrow_gesture"
         android:title="@string/back_gesture_arrow_message"
