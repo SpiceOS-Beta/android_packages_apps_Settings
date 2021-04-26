@@ -30,16 +30,4 @@
         android:summary="@string/lockscreen_lock_icon_summary"
         android:defaultValue="true" />
 
-    <lineageos.preference.LineageSecureSettingSwitchPreference
-        android:key="lockscreen_media_metadata"
-        android:title="@string/lockscreen_media_art_title"
-        android:defaultValue="false" />
-
-    <lineageos.preference.LineageSecureSettingSwitchPreference
-        android:key="lockscreen_visualizer"
-        android:icon="@drawable/ic_visualizer"
-        android:title="@string/lockscreen_visualizer_title"
-        android:defaultValue="false" />
-
-
 </PreferenceScreen>
