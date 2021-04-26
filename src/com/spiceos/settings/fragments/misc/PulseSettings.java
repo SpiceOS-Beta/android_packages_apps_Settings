@@ -1,177 +1,238 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2016-2020 spiceos Android Project
+/*
+ * Copyright (C) 2016-2020 crDroid Android Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.spiceos.settings.fragments.misc;
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+import android.content.Context;
+import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.res.Resources;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.provider.Settings;
 
-          http://www.apache.org/licenses/LICENSE-2.0
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
-    <SwitchPreference
-        android:key="navbar_visibility"
-        android:icon="@drawable/ic_navbar"
-        android:title="@string/navbar_visibility"
-        android:summary="@string/navbar_visibility_summary" />
+import com.spiceos.settings.preferences.colorpicker.ColorPickerPreference;
 
-    <Preference
-        android:key="stock_settings"
-        android:icon="@drawable/ic_shapes"
-        android:title="@string/navbar_settings_title"
-        android:dependency="navbar_visibility"
-        android:summary="@string/navbar_settings_summary"
-        android:fragment="com.spiceos.settings.fragments.navigation.StockNavBarSettings" />
+public class PulseSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
-    <!-- PIE
-    <Preference
-        android:key="pie_settings"
-        android:icon="@drawable/ic_pie"
-        android:title="@string/pie_settings"
-        android:summary="@string/pie_settings_summary"
-        android:fragment="com.spiceos.settings.fragments.navigation.PieSettings" /> -->
+    private static final String TAG = PulseSettings.class.getSimpleName();
 
-    <!--<PreferenceCategory
-        android:key="category_navbar_interface"
-        android:title="@string/navbar_interface_title" >
+    private static final String NAVBAR_PULSE_ENABLED_KEY = "navbar_pulse_enabled";
+    private static final String LOCKSCREEN_PULSE_ENABLED_KEY = "lockscreen_pulse_enabled";
+    private static final String PULSE_SMOOTHING_KEY = "pulse_smoothing_enabled";
+    private static final String PULSE_COLOR_MODE_KEY = "pulse_color_mode";
+    private static final String PULSE_COLOR_MODE_CHOOSER_KEY = "pulse_color_user";
+    private static final String PULSE_COLOR_MODE_LAVA_SPEED_KEY = "pulse_lavalamp_speed";
+    private static final String PULSE_RENDER_CATEGORY_SOLID = "pulse_2";
+    private static final String PULSE_RENDER_CATEGORY_FADING = "pulse_fading_bars_category";
+    private static final String PULSE_RENDER_MODE_KEY = "pulse_render_style";
+    private static final int RENDER_STYLE_FADING_BARS = 0;
+    private static final int RENDER_STYLE_SOLID_LINES = 1;
+    private static final int COLOR_TYPE_ACCENT = 0;
+    private static final int COLOR_TYPE_USER = 1;
+    private static final int COLOR_TYPE_LAVALAMP = 2;
+    private static final int COLOR_TYPE_AUTO = 3;
 
-       <com.spiceos.settings.preferences.SecureSettingListPreference
-            android:key="navigation_bar_mode"
-            android:icon="@drawable/ic_navbar_mode"
-            android:title="@string/navbar_mode"
-            android:summary="@string/navbar_mode_summary"
-            android:entries="@array/systemui_navbar_mode_entries"
-            android:entryValues="@array/systemui_navbar_mode_values"
-            android:dependency="navbar_visibility"
-            android:defaultValue="0"/>
+    private static final String PULSE_SETTINGS_FOOTER = "pulse_settings_footer";
 
-        <Preference
-            android:key="smartbar_settings"
-            android:icon="@drawable/ic_smartbar"
-            android:title="@string/smartbar_settings_title"
-            android:summary="@string/smartbar_settings_summary"
-            android:dependency="navbar_visibility"
-            android:fragment="com.spiceos.settings.fragments.navigation.smartnav.SmartbarSettings" />
+    private SwitchPreference mNavbarPulse;
+    private SwitchPreference mLockscreenPulse;
+    private SwitchPreference mPulseSmoothing;
+    private Preference mRenderMode;
+    private ListPreference mColorModePref;
+    private ColorPickerPreference mColorPickerPref;
+    private Preference mLavaSpeedPref;
+    private Preference mFooterPref;
 
-        <Preference
-            android:key="fling_settings"
-            android:icon="@drawable/ic_fling"
-            android:title="@string/fling_settings"
-            android:summary="@string/fling_settings_summary"
-            android:dependency="navbar_visibility"
-            android:fragment="com.spiceos.settings.fragments.navigation.smartnav.FlingSettings" />
+    private PreferenceCategory mFadingBarsCat;
+    private PreferenceCategory mSolidBarsCat;
 
-        <com.spiceos.settings.preferences.CustomSeekBarPreference
-            android:key="navbar_height_portrait"
-            android:icon="@drawable/ic_bar"
-            android:title="@string/portrait_title"
-            android:max="135"
-            settings:min="65"
-            settings:units="%"
-            android:dependency="navbar_visibility" />
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        <com.spiceos.settings.preferences.CustomSeekBarPreference
-            android:key="navbar_height_landscape"
-            android:icon="@drawable/ic_bar"
-            android:title="@string/land_hor_title"
-            android:max="135"
-            settings:min="65"
-            settings:units="%"
-            android:dependency="navbar_visibility" />
+        addPreferencesFromResource(R.xml.pulse_settings);
 
-        <com.spiceos.settings.preferences.CustomSeekBarPreference
-            android:key="navbar_width"
-            android:icon="@drawable/ic_bar"
-            android:title="@string/land_vert_title"
-            android:max="135"
-            settings:min="65"
-            settings:units="%"
-            android:dependency="navbar_visibility" />
-    </PreferenceCategory>-->
+        ContentResolver resolver = getContext().getContentResolver();
 
-    <!-- Gestures -->
-    <PreferenceCategory
-        android:key="navbar_gestures_category"
-        android:title="@string/gestures_title">
+        mNavbarPulse = (SwitchPreference) findPreference(NAVBAR_PULSE_ENABLED_KEY);
+        boolean navbarPulse = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.NAVBAR_PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        mNavbarPulse.setChecked(navbarPulse);
+        mNavbarPulse.setOnPreferenceChangeListener(this);
 
-        <!--<com.spiceos.settings.preferences.SecureSettingSwitchPreference
-            android:key="one_handed_mode_ui"
-            android:icon="@drawable/ic_gesture_swipe_horizontal"
-            android:title="@string/one_handed_mode_title"
-            android:summary="@string/one_handed_mode_summary"
-            android:defaultValue="false" />
+        mLockscreenPulse = (SwitchPreference) findPreference(LOCKSCREEN_PULSE_ENABLED_KEY);
+        boolean lockscreenPulse = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.LOCKSCREEN_PULSE_ENABLED, 1, UserHandle.USER_CURRENT) != 0;
+        mLockscreenPulse.setChecked(lockscreenPulse);
+        mLockscreenPulse.setOnPreferenceChangeListener(this);
 
-        <PreferenceScreen
-            android:key="carbon_gestures"
-            android:icon="@drawable/ic_gesture_swipe_horizontal"
-            android:fragment="com.spiceos.settings.fragments.navigation.CarbonGesturesSettings"
-            android:title="@string/carbon_gesture_preference_title"
-            android:summary="@string/carbon_gestures_summary" />
+        mColorModePref = (ListPreference) findPreference(PULSE_COLOR_MODE_KEY);
+        mColorPickerPref = (ColorPickerPreference) findPreference(PULSE_COLOR_MODE_CHOOSER_KEY);
+        mLavaSpeedPref = findPreference(PULSE_COLOR_MODE_LAVA_SPEED_KEY);
+        mColorModePref.setOnPreferenceChangeListener(this);
 
-        <PreferenceScreen
-            android:key="swipeup_gestures"
-            android:icon="@drawable/ic_gesture_swipe_up"
-            android:fragment="com.spiceos.settings.fragments.navigation.SwipeUpGesturesSettings"
-            android:title="@string/use_bottom_gesture_title"
-            android:summary="@string/use_bottom_gesture_summary" />
+        mRenderMode = findPreference(PULSE_RENDER_MODE_KEY);
+        mRenderMode.setOnPreferenceChangeListener(this);
 
-        <PreferenceScreen
-            android:key="edge_gestures"
-            android:title="@string/edge_gestures_title"
-            android:summary="@string/edge_gestures_summary"
-            android:fragment="com.spiceos.settings.fragments.navbar.EdgeGestureSettings" />-->
+        mFadingBarsCat = (PreferenceCategory) findPreference(
+                PULSE_RENDER_CATEGORY_FADING);
+        mSolidBarsCat = (PreferenceCategory) findPreference(
+                PULSE_RENDER_CATEGORY_SOLID);
 
-        <org.lineageos.internal.lineageparts.LineagePartsPreference
-            android:key="touchscreen_gesture_settings"
-            android:icon="@drawable/ic_double_tap"
-            lineage:requiresFeature="lineagehardware:FEATURE_TOUCHSCREEN_GESTURES" />
+        mPulseSmoothing = (SwitchPreference) findPreference(PULSE_SMOOTHING_KEY);
 
-        <!--<lineageos.preference.RemotePreference
-            android:key="device_touchscreen_gesture_settings"
-            android:icon="@drawable/ic_double_tap"
-            android:title="@string/touchscreen_gesture_settings_title"
-            android:summary="@string/touchscreen_gesture_settings_summary"
-            lineage:replacesKey="touchscreen_gesture_settings"
-            lineage:requiresFeature="lineagehardware:FEATURE_TOUCHSCREEN_GESTURES">
-                <intent android:action="org.lineageos.settings.device.GESTURE_SETTINGS" />
-        </lineageos.preference.RemotePreference>-->
+        mFooterPref = findPreference(PULSE_SETTINGS_FOOTER);
+        mFooterPref.setTitle(R.string.pulse_help_policy_notice_summary);
 
-        <Preference
-            android:key="system_gesture_settings"
-            android:icon="@drawable/ic_settings_gestures"
-            android:title="@string/system_gestures_title"
-            android:summary="@string/system_gestures_summary"
-            android:fragment="com.android.settings.gestures.GestureSettings"
-            settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+        updateAllPrefs();
+    }
 
-        <!--<com.spiceos.settings.preferences.SystemSettingSwitchPreference
-            android:key="double_tap_sleep_navbar"
-            android:icon="@drawable/ic_double_tap"
-            android:title="@string/smartbar_doubletap_sleep_title"
-            android:summary="@string/smartbar_doubletap_sleep_summary"
-            android:dependency="navbar_visibility"
-            android:defaultValue="false" />-->
-    </PreferenceCategory>
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getContext().getContentResolver();
+        if (preference == mNavbarPulse) {
+            boolean val = (Boolean) newValue;
+            Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.NAVBAR_PULSE_ENABLED, val ? 1 : 0, UserHandle.USER_CURRENT);
+            updateAllPrefs();
+            return true;
+        } else if (preference == mLockscreenPulse) {
+            boolean val = (Boolean) newValue;
+            Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.LOCKSCREEN_PULSE_ENABLED, val ? 1 : 0, UserHandle.USER_CURRENT);
+            updateAllPrefs();
+            return true;
+        } else if (preference == mColorModePref) {
+            updateColorPrefs(Integer.valueOf(String.valueOf(newValue)));
+            return true;
+        } else if (preference == mRenderMode) {
+            updateRenderCategories(Integer.valueOf(String.valueOf(newValue)));
+            return true;
+        }
+        return false;
+    }
 
-    <!--<PreferenceCategory
-        android:key="category_navbar_general"
-        android:title="@string/navbar_general_title" >
+    private void updateAllPrefs() {
+        ContentResolver resolver = getContext().getContentResolver();
 
-        <SwitchPreference
-            android:key="navbar_dynamic"
-            android:icon="@drawable/ic_color_bucket"
-            android:title="@string/navbar_dynamic_title"
-            android:summary="@string/navbar_dynamic_summary"
-            android:defaultValue="false"/>
-    </PreferenceCategory>-->
-</PreferenceScreen>
+        boolean navbarPulse = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.NAVBAR_PULSE_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        boolean lockscreenPulse = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.LOCKSCREEN_PULSE_ENABLED, 1, UserHandle.USER_CURRENT) != 0;
+
+        mPulseSmoothing.setEnabled(navbarPulse || lockscreenPulse);
+
+        mColorModePref.setEnabled(navbarPulse || lockscreenPulse);
+        if (navbarPulse || lockscreenPulse) {
+            int colorMode = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.PULSE_COLOR_MODE, COLOR_TYPE_LAVALAMP, UserHandle.USER_CURRENT);
+            updateColorPrefs(colorMode);
+        } else {
+            mColorPickerPref.setEnabled(false);
+            mLavaSpeedPref.setEnabled(false);
+        }
+
+        mRenderMode.setEnabled(navbarPulse || lockscreenPulse);
+        if (navbarPulse || lockscreenPulse) {
+            int renderMode = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.PULSE_RENDER_STYLE, RENDER_STYLE_SOLID_LINES, UserHandle.USER_CURRENT);
+            updateRenderCategories(renderMode);
+        } else {
+            mFadingBarsCat.setEnabled(false);
+            mSolidBarsCat.setEnabled(false);
+        }
+
+        mFooterPref.setEnabled(navbarPulse || lockscreenPulse);
+    }
+
+    private void updateColorPrefs(int val) {
+        switch (val) {
+            case COLOR_TYPE_ACCENT:
+                mColorPickerPref.setEnabled(false);
+                mLavaSpeedPref.setEnabled(false);
+                break;
+            case COLOR_TYPE_USER:
+                mColorPickerPref.setEnabled(true);
+                mLavaSpeedPref.setEnabled(false);
+                break;
+            case COLOR_TYPE_LAVALAMP:
+                mColorPickerPref.setEnabled(false);
+                mLavaSpeedPref.setEnabled(true);
+                break;
+            case COLOR_TYPE_AUTO:
+                mColorPickerPref.setEnabled(false);
+                mLavaSpeedPref.setEnabled(false);
+                break;
+        }
+    }
+
+    private void updateRenderCategories(int mode) {
+        mFadingBarsCat.setEnabled(mode == RENDER_STYLE_FADING_BARS);
+        mSolidBarsCat.setEnabled(mode == RENDER_STYLE_SOLID_LINES);
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.NAVBAR_PULSE_ENABLED, 0, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.LOCKSCREEN_PULSE_ENABLED, 1, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_RENDER_STYLE, RENDER_STYLE_SOLID_LINES, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_SMOOTHING_ENABLED, 0, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_COLOR_MODE, COLOR_TYPE_LAVALAMP, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_COLOR_USER, 0x92FFFFFF, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_LAVALAMP_SPEED, 10000, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_CUSTOM_DIMEN, 14, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_CUSTOM_DIV, 16, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_FILLED_BLOCK_SIZE, 4, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_EMPTY_BLOCK_SIZE, 1, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_CUSTOM_FUDGE_FACTOR, 4, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_SOLID_UNITS_OPACITY, 200, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_SOLID_UNITS_COUNT, 32, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.PULSE_SOLID_FUDGE_FACTOR, 4, UserHandle.USER_CURRENT);
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.SPICEOS_SETTINGS;
+    }
+}

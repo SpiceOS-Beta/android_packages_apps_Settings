@@ -171,5 +171,11 @@
             android:max="7"
             settings:min="2"
             android:dependency="pulse_2"/>
+
+        <com.android.settingslib.widget.FooterPreference
+            android:key="pulse_settings_footer"
+            android:selectable="false"
+            settings:searchable="false" />
+
     </PreferenceCategory>
 </PreferenceScreen>
