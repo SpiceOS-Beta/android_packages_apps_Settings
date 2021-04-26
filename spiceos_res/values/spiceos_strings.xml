@@ -291,4 +291,11 @@
       <string name="smart_charging_reset_stats_summary">Reset battery statistics after reaching user defined charging level</string>
       <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery</string>
 
+      <!-- Ambient edge lighting -->
+      <string name="default_string">Default</string>
+      <string name="notification_screen_title">Screen</string>
+      <string name="pulse_ambient_light_title">Edge lighting</string>
+      <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
+      <string name="pulse_ambient_light_color_title">Edge light color</string>
+
 </resources>

@@ -88,13 +88,13 @@
             android:fragment="com.spiceos.settings.fragments.NavSettings"
             android:icon="@drawable/ic_navigation"/>-->
 
-        <!-- Notifications
+        <!-- Notifications -->
         <com.spiceos.settings.preferences.CardviewPreference
             android:key="notifications_category"
             android:title="@string/notifications_title"
             android:summary="@string/notifications_summary"
             android:fragment="com.spiceos.settings.fragments.NotificationSettings"
-            android:icon="@drawable/ic_settings_notifications"/> -->
+            android:icon="@drawable/ic_settings_notifications"/>
 
         <!--Misc -->
         <com.spiceos.settings.preferences.CardviewPreference
