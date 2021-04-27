@@ -40,7 +40,7 @@
         android:title="@string/pulse_on_new_tracks_title"
         android:summary="@string/pulse_on_new_tracks_summary" />
 
-    <com.spiceos.settings.preferences.SystemSettingListPreference
+    <com.crdroid.settings.preferences.SecureSettingListPreference
         android:key="pulse_ambient_light_layout"
         android:title="@string/pulse_ambient_light_layout_title"
         android:entries="@array/pulse_ambient_light_layout_entries"
