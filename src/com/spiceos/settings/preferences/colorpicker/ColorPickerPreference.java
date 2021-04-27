@@ -97,7 +97,7 @@ public class ColorPickerPreference extends Preference implements
     @Override
     protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
         // when using PreferenceDataStore, restorePersistedValue is always true (see Preference class for reference)
-        // so we load the persistent value with getPersistedInt if available in the data store, 
+        // so we load the persistent value with getPersistedInt if available in the data store,
         // and use defaultValue as fallback (onGetDefaultValue has been already called and it loaded the android:defaultValue attr from our xml).
         if (defaultValue == null) {
             // if we forgot to add android:defaultValue, default to black color
