@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.android.settings.R;
 import com.spiceos.settings.fragments.misc.SmartCharging;
-import com.spiceos.settings.fragments.sound.PulseSettings;
+import com.spiceos.settings.fragments.misc.PulseSettings;
 
 @SearchIndexable
 public class MiscSettings extends SettingsPreferenceFragment implements

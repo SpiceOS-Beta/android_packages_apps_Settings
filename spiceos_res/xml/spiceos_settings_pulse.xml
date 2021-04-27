@@ -21,8 +21,8 @@
 
     <com.spiceos.settings.preferences.SecureSettingSwitchPreference
         android:key="navbar_pulse_enabled"
-        android:title="@string/show_pulse_title"
-        android:summary="@string/show_pulse_summary"
+        android:title="@string/show_navbar_pulse_title"
+        android:summary="@string/show_navbar_pulse_summary"
         android:defaultValue="false"/>
 
     <!--<Preference

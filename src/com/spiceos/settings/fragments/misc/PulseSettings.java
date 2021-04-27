@@ -78,7 +78,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.pulse_settings);
+        addPreferencesFromResource(R.xml.spiceos_settings_pulse);
 
         ContentResolver resolver = getContext().getContentResolver();
 
@@ -217,7 +217,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         Settings.Secure.putIntForUser(resolver,
-                Settings.Secure.AMBIENT_PULSE_ENABLED, 0, UserHandle.USER_CURRENT);        
+                Settings.Secure.AMBIENT_PULSE_ENABLED, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.NAVBAR_PULSE_ENABLED, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
