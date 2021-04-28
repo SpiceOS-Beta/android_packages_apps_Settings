@@ -89,4 +89,16 @@
         android:summary="@string/pulse_settings_summary"
         android:fragment="com.spiceos.settings.fragments.misc.PulseSettings" />
 
+    <com.spiceos.settings.preferences.SecureSettingSwitchPreference
+        android:key="pulse_ambient_light"
+        android:title="@string/pulse_ambient_light_title"
+        android:summary="@string/pulse_ambient_light_summary"
+        android:dependency="false" />
+
+    <com.spiceos.settings.preferences.colorpicker.SecureSettingColorPickerPreference
+        android:key="pulse_ambient_light_color"
+        android:title="@string/pulse_ambient_light_color_title"
+        android:dependency="pulse_ambient_light"
+        android:defaultValue="0xFF3980FF" />
+
 </PreferenceScreen>
