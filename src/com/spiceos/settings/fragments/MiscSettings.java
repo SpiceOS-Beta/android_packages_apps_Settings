@@ -33,6 +33,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.spiceos.settings.preferences.CustomSeekBarPreference;
 import com.spiceos.settings.preferences.colorpicker.ColorPickerPreference;
+import com.spiceos.settings.preferences.SecureSettingSeekBarPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.search.SearchIndexable;
