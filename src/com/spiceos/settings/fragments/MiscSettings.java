@@ -38,6 +38,7 @@ import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.search.BaseSearchIndexProvider;
 import java.util.List;
 import java.util.ArrayList;
+import com.spiceos.settings.fragments.misc.PulseSettings;
 import com.android.settings.R;
 import com.spiceos.settings.fragments.misc.SmartCharging;
 

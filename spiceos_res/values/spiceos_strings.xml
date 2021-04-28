@@ -291,4 +291,99 @@
       <string name="smart_charging_reset_stats_summary">Reset battery statistics after reaching user defined charging level</string>
       <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery</string>
 
+      <!-- Pulse navigation bar music visualizer -->
+      <string name="pulse_help_policy_notice_title">About Pulse</string>
+      <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic equalizer when music plays on the device</string>
+      <string name="pulse_settings">Pulse</string>
+      <string name="pulse_settings_summary">Audio graphic equalizer for navigation bar and lockscreen</string>
+      <string name="show_navbar_pulse_title">Navbar Pulse</string>
+      <string name="show_navbar_pulse_summary">Audio graphic equalizer on the navigation bar</string>
+      <string name="show_lockscreen_pulse_title">Lockscreen Pulse</string>
+      <string name="show_lockscreen_pulse_summary">Audio graphic equalizer on the lockscreen</string>
+      <string name="show_ambient_pulse_title">Ambient Pulse</string>
+      <string name="show_ambient_pulse_summary">Audio graphic equalizer on the ambient screen</string>
+      <string name="pulse_render_mode_title">Render mode</string>
+      <string name="pulse_render_mode_fading_bars">Fading blocks</string>
+      <string name="pulse_render_mode_solid_lines">Solid lines</string>
+      <string name="pulse_advanced_category">Advanced</string>
+      <string name="pulse_legacy_mode_advanced_category">Fading blocks mode settings</string>
+      <string name="pulse_custom_fudge_factor">Sanity level</string>
+      <string name="pulse_lavalamp_speed_title">Lava lamp speed</string>
+      <string name="pulse_solid_units_count">Solid lines count</string>
+      <string name="pulse_solid_units_opacity">Solid lines opacity</string>
+      <string name="pulse_solid_dimen_category">Solid lines mode settings</string>
+      <string name="fling_lavalamp_color_from">Lava Lamp start color</string>
+      <string name="fling_lavalamp_color_to">Lava Lamp end color</string>
+      <string name="pulse_custom_buttons_opacity_title">Smartbar buttons opacity on Pulse</string>
+      <string name="pulse_color_mode_title">Color</string>
+      <string name="pulse_color_accent">Accent</string>
+      <string name="pulse_color_custom">Custom</string>
+      <string name="pulse_color_lava_lamp">Lava lamp</string>
+      <string name="pulse_color_auto">Album art</string>
+      <string name="pulse_color_user_title">Choose color</string>
+      <string name="pulse_smoothing_enabled_title">Turn on smoothing</string>
+      <string name="pulse_smoothing_enabled_summary">Each bar is animated more smoothly</string>
+
+      <!-- Pulse config -->
+      <string name="pulse_custom_dimen">Bar width</string>
+      <string name="pulse_custom_div">Bar spacing</string>
+      <string name="pulse_filled_block_size">Block size</string>
+      <string name="pulse_empty_block_size">Block spacing</string>
+      <string name="pulse_blacklist_title">Apps blacklist</string>
+      <string name="pulse_blacklist_summary">Apps to be skipped for Pulse</string>
+      <string name="pulse_blacklist_apps_cat_title">Blacklist</string>
+      <string name="pulse_blacklist_apps_title">Apps blacklist</string>
+      <string name="pulse_blacklist_apps_summary">Apps to not show in the panel</string>
+      <string name="pulse_blacklist_add_apps_title">Add app</string>
+      <string name="pulse_blacklist_add_apps_summary">Tap here to add, tap on added app to remove it</string>
+
+      <!-- Doze pulse options -->
+      <string name="summary_doze_enabled">Enabled</string>
+      <string name="summary_doze_disabled">Disabled</string>
+      <string name="doze_overwrite_value_title">Overwrite defaults</string>
+      <string name="doze_overwrite_value_summary">Allow override of default values with user config</string>
+      <string name="doze_pulse_title">User configurable settings</string>
+      <string name="doze_fade_in_pickup_title">Fade in (Pick up)</string>
+      <string name="doze_fade_in_doubletap_title">Fade in (Double tap)</string>
+      <string name="doze_pulse_duration_in_summary"></string>
+      <string name="doze_pulse_duration_visible_title">Visible duration</string>
+      <string name="doze_pulse_duration_visible_summary"></string>
+      <string name="doze_pulse_duration_out_title">Fade out</string>
+      <string name="doze_pulse_duration_out_summary"></string>
+      <string name="doze_brightness_level_title">Brightness level</string>
+      <string name="onehundred_ms">100 ms</string>
+      <string name="twofifty_ms">250 ms</string>
+      <string name="fivehundred_ms_default">500 ms (default)</string>
+      <string name="sevenfifty_ms">750 ms</string>
+      <string name="one_second">1 s</string>
+      <string name="onehalf_second">1.5 s</string>
+      <string name="two_second">2 s</string>
+      <string name="twohalf_second">2.5 s</string>
+      <string name="three_second_default">3 s (default)</string>
+      <string name="threehalf_second">3.5 s</string>
+      <string name="four_second">4 s</string>
+      <string name="fourhalf_second">4.5 s</string>
+      <string name="five_second">5 s</string>
+      <string name="doze_notification_color_invert_title">Notification inversion</string>
+      <string name="doze_notification_color_invert_summary_off">Notifications will not be inverted. Use for dark themes.</string>
+      <string name="doze_notification_color_invert_summary_on">Notifications will be inverted. Use for light/stock theme.</string>
+      <string name="doze_vibrate_on_pickup_title">Vibrate on pickup</string>
+      <string name="doze_check_proximity_before_pulse_title">Check proximity before pulse</string>
+      <string name="sensor_warning_title">Caution</string>
+      <string name="sensor_warning_message">Settings based on sensors are subject to hardware compatibility. Enabling sensors for ambient display may increase power drain.</string>
+
+      <!-- Ambient edge lighting -->
+      <string name="pulse_ambient_light_title">Edge lighting</string>
+      <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
+      <string name="pulse_ambient_light_color_title">Edge light color</string>
+      <string name="pulse_ambient_light_duration_title">Edge light duration</string>
+      <string name="pulse_ambient_light_duration_summary">Sets the ambient light animation duration</string>
+      <string name="pulse_ambient_light_layout_title">Edge light view</string>
+      <string name="pulse_ambient_light_layout_solid">Solid</string>
+      <string name="pulse_ambient_light_layout_faded">Faded</string>
+      
+      <!-- Ambient Ticker -->
+      <string name="pulse_on_new_tracks_title">Music ticker</string>
+      <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
+
 </resources>

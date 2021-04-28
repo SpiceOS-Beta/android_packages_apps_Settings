@@ -81,4 +81,12 @@
         android:title="@string/hwkeys_disabled_title"
         android:summary="@string/hwkeys_disabled_summary" />
 
+    <!-- Pulse -->
+    <Preference
+        android:key="pulse_settings"
+        android:icon="@drawable/ic_pulse"
+        android:title="@string/pulse_settings"
+        android:summary="@string/pulse_settings_summary"
+        android:fragment="com.spiceos.settings.fragments.misc.PulseSettings" />
+
 </PreferenceScreen>
