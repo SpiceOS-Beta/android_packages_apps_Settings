@@ -112,16 +112,6 @@
             android:data="https://t.me/kalmin06" />
         </Preference>
 
-        <Preference
-            android:key="dev8"
-            android:title="@string/dev_8"
-            android:icon="@drawable/ic_code"
-            android:summary="@string/dev8_description" >
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/Axewolf21" />
-        </Preference>
-
 </PreferenceCategory>
 
 <PreferenceCategory
@@ -152,6 +142,74 @@
             android:data="https://www.github.com/SpiceOS-Devices" />
         </Preference>
 
+        <!-- Asus -->
+        <Preference
+            android:title="@string/device_x00td"
+            android:summary="@string/device_x00td_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/vivekachooz" />
+        </Preference>
+
+        <!-- Motorola -->
+        <Preference
+            android:title="@string/device_osprey"
+            android:summary="@string/device_osprey_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/althafvly" />
+        </Preference>
+
+        <!--POCO-->
+        <Preference
+            android:title="@string/device_beryllium"
+            android:summary="@string/device_beryllium_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/althafvly" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_miatoll"
+            android:summary="@string/device_miatoll_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/GhosTriX" />
+        </Preference>
+
+        <!-- Redmi -->
+        <Preference
+            android:title="@string/device_davinci"
+            android:summary="@string/device_davinci_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/Pro_Karou" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_tulip"
+            android:summary="@string/device_tulip_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/bittencourtjulival" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_violet"
+            android:summary="@string/device_violet_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/kalmin06" />
+        </Preference>
+
+        <!-- Xiaomi -->
         <Preference
             android:title="@string/device_jasmine_sprout"
             android:summary="@string/device_jasmine_sprout_description"
@@ -162,12 +220,21 @@
         </Preference>
 
         <Preference
-            android:title="@string/device_osprey"
-            android:summary="@string/device_osprey_description"
+            android:title="@string/device_wayne"
+            android:summary="@string/device_wayne_description"
             android:icon="@drawable/ic_devs_phone">
 	<intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/althafvly" />
+            android:data="https://t.me/Anush02198" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_toco"
+            android:summary="@string/device_toco_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/id1otina" />
         </Preference>
 
 </PreferenceCategory>
