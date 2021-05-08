@@ -47,9 +47,6 @@
     <string name="dev_7">Suneesh</string>
     <string name="dev_7_git">kalmin06</string>
     <string name="dev7_description">Group Manager</string>
-    <string name="dev_8">Joshua</string>
-    <string name="dev_8_git">axewolf21</string>
-    <string name="dev8_description">Group Manager</string>
 
     <!-- Mentions -->
     <string name="mentions_header">Honorable Mentions</string>
@@ -62,10 +59,26 @@
     <string name="co_maintainers_header">Co-Maintainers</string>
     <string name="maintainers_header_summary">These are the Official Devices Maintainers...</string>
     <string name="device_maintainers"></string>
-    <string name="device_jasmine_sprout">MI A2</string>
+    <string name="device_jasmine_sprout">Xiaomi MI A2</string>
     <string name="device_jasmine_sprout_description">jasmine_sprout\nAnush02198</string>
+    <string name="device_wayne">Xiaomi MI 6X</string>
+    <string name="device_wayne_description">wayne\nAnush02198</string>
     <string name="device_osprey">Moto G 2015</string>
     <string name="device_osprey_description">osprey\nalthafvly</string>
+    <string name="device_beryllium">POCO F1</string>
+    <string name="device_beryllium_description">beryllium\nalthafvly</string>
+    <string name="device_miatoll">Miatoll</string>
+    <string name="device_miatoll_description">miatoll\nGhostrix</string>
+    <string name="device_x00td">Asus Zenfone Max Pro M1</string>
+    <string name="device_x00td_description">X00TD\nVivek Achooz</string>
+    <string name="device_davinci">Redmi K20</string>
+    <string name="device_davinci_description">davinci\n Karou</string>
+    <string name="device_tulip">Redmi Note 6 Pro</string>
+    <string name="device_tulip_description">tulip\nJulival Bittencourt</string>
+    <string name="device_toco">Xiaomi MI Note 10 lite</string>
+    <string name="device_toco_description">toco\nIgor Ch</string>
+    <string name="device_violet">Redmi Note 7 Pro</string>
+    <string name="device_violet_description">violet\nSuneesh</string>
 
     <!-- Categories -->
     <string name="gestures_title">Gestures</string>
@@ -381,7 +394,7 @@
       <string name="pulse_ambient_light_layout_title">Edge light view</string>
       <string name="pulse_ambient_light_layout_solid">Solid</string>
       <string name="pulse_ambient_light_layout_faded">Faded</string>
-      
+
       <!-- Ambient Ticker -->
       <string name="pulse_on_new_tracks_title">Music ticker</string>
       <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
