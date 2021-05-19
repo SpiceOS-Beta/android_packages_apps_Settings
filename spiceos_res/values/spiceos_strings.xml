@@ -407,4 +407,7 @@
       <string name="volume_panel_oreo">Oreo</string>
       <string name="volume_panel_tiled">Tiled</string>
 
+      <!-- Notification background opacity -->
+      <string name="notification_alpha_title">Notification background opacity</string>
+
 </resources>
