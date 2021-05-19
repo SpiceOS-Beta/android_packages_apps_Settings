@@ -101,4 +101,14 @@
         android:summary="@string/qs_bg_use_new_tint_summary"
         android:defaultValue="false" />
 
+    <!-- Notification background opacity -->
+    <com.spiceos.settings.preferences.SystemSettingSeekBarPreference
+        android:key="notification_bg_alpha"
+        android:title="@string/notification_alpha_title"
+        android:icon="@drawable/ic_invert_colors"
+        android:defaultValue="255"
+        android:max="255"
+        settings:min="0"
+        settings:units="" />
+
 </PreferenceScreen>
