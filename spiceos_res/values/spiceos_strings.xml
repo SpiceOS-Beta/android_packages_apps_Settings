@@ -399,4 +399,12 @@
       <string name="pulse_on_new_tracks_title">Music ticker</string>
       <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
 
+      <!--  Volume Panel Plugin   -->
+      <string name="volume_panel">Volume Panel Style</string>
+      <string name="volume_panel_stock">Stock</string>
+      <string name="volume_panel_aosp">AOSP</string>
+      <string name="volume_panel_compact">Compact</string>
+      <string name="volume_panel_oreo">Oreo</string>
+      <string name="volume_panel_tiled">Tiled</string>
+
 </resources>

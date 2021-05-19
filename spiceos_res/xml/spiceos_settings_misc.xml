@@ -124,4 +124,11 @@
             android:dependency="pulse_ambient_light" />
     </PreferenceCategory>
 
+      <com.spiceos.settings.preferences.SystemSettingListPreference
+          android:key="systemui_plugin_volume"
+          android:title="@string/volume_panel"
+          android:entries="@array/volume_panel_entries"
+          android:entryValues="@array/volume_panel_values"
+          android:defaultValue="com.android.systemui.volume" />
+
 </PreferenceScreen>
