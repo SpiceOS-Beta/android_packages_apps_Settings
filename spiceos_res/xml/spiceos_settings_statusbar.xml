@@ -75,4 +75,10 @@
         android:title="@string/old_mobiletype_title"
         android:summary="@string/old_mobiletype_summary" />
 
+    <com.spiceos.settings.preferences.SystemSettingSwitchPreference
+        android:key="statusbar_icons_style"
+        android:title="@string/statusbar_icons_style"
+        android:summary="@string/statusbar_icons_style_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
