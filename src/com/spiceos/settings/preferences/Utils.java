@@ -17,6 +17,7 @@
 package com.spiceos.settings.preferences;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
@@ -32,6 +33,7 @@ import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.net.ConnectivityManager;
 import android.os.UserManager;
+import android.os.SystemProperties;
 import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.view.DisplayInfo;
@@ -205,4 +207,13 @@ public final class Utils {
         }
         return false;
     }
+
+    public static boolean isBlurSupported() {
+    boolean blurSupportedSysProp = SystemProperties
+        .getBoolean("ro.surface_flinger.supports_background_blur", false);
+    boolean blurDisabledSysProp = SystemProperties
+        .getBoolean("persist.sys.sf.disable_blurs", false);
+    return blurSupportedSysProp && !blurDisabledSysProp && ActivityManager.isHighEndGfx();
+    }
+
 }
