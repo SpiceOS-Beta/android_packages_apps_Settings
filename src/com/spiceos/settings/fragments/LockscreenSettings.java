@@ -30,21 +30,32 @@ import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
-
+import com.spiceos.settings.preferences.Utils;
 import com.android.settings.R;
+
+import java.util.List;
 
 public class LockscreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String LOCKSCREEN_BLUR = "lockscreen_blur";
+    private Preference mLockscreenBlur;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.spiceos_settings_lockscreen);
         ContentResolver resolver = getActivity().getContentResolver();
+        PreferenceScreen prefSet = getPreferenceScreen();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mLockscreenBlur = (Preference) findPreference(LOCKSCREEN_BLUR);
+          if (!Utils.isBlurSupported()) {
+            prefSet.removePreference(mLockscreenBlur);
+      }
     }
 
     @Override
@@ -65,4 +76,20 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.spiceos_settings_lockscreen) {
+
+              @Override
+              public List<String> getNonIndexableKeys(Context context) {
+                  List<String> keys = super.getNonIndexableKeys(context);
+
+                  if (!Utils.isBlurSupported()) {
+                      keys.add(LOCKSCREEN_BLUR);
+                  }
+
+                  return keys;
+              }
+          };
+
 }
