@@ -131,4 +131,12 @@
           android:entryValues="@array/volume_panel_values"
           android:defaultValue="com.android.systemui.volume" />
 
+      <!-- Notification guts kill app button -->
+      <com.spiceos.settings.preferences.SystemSettingSwitchPreference
+          android:key="notification_guts_kill_app_button"
+          android:icon="@drawable/ic_kill"
+          android:title="@string/notification_guts_kill_app_button_title"
+          android:summary="@string/notification_guts_kill_app_button_summary"
+          android:defaultValue="false" />
+
 </PreferenceScreen>
