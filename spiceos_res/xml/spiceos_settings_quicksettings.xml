@@ -111,4 +111,11 @@
         settings:min="0"
         settings:units="" />
 
+    <!-- QS Bottom Brightness Slider  -->
+    <com.spiceos.settings.preferences.SecureSettingSwitchPreference
+        android:key="qs_brightness_position_bottom"
+        android:title="@string/qs_brightness_position_bottom_title"
+        android:summary="@string/qs_brightness_position_bottom_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
