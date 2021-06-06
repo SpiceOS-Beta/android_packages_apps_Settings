@@ -36,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textSize="12sp"
             android:textColor="@color/off_black"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
