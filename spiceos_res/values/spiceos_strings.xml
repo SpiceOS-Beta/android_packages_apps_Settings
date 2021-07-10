@@ -63,10 +63,6 @@
     <string name="device_jasmine_sprout_description">jasmine_sprout\nAnush02198</string>
     <string name="device_wayne">Xiaomi MI 6X</string>
     <string name="device_wayne_description">wayne\nAnush02198</string>
-    <string name="device_osprey">Moto G 2015</string>
-    <string name="device_osprey_description">osprey\nalthafvly</string>
-    <string name="device_beryllium">POCO F1</string>
-    <string name="device_beryllium_description">beryllium\nalthafvly</string>
     <string name="device_miatoll">Miatoll</string>
     <string name="device_miatoll_description">miatoll\nGhostrix</string>
     <string name="device_x00td">Asus Zenfone Max Pro M1</string>
@@ -79,6 +75,10 @@
     <string name="device_toco_description">toco\nIgor Ch</string>
     <string name="device_violet">Redmi Note 7 Pro</string>
     <string name="device_violet_description">violet\nSuneesh</string>
+    <string name="device_perseus">Mi Mix 3</string>
+    <string name="device_perseus_description">perseus\MickenKng</string>
+    <string name="device_rmx1971">Realme 5 Pro</string>
+    <string name="device_rmx1971_description">RMX1971\nBond</string>
 
     <!-- Categories -->
     <string name="gestures_title">Gestures</string>

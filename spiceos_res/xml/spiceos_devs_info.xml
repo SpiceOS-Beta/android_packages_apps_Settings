@@ -153,24 +153,8 @@
         </Preference>
 
         <!-- Motorola -->
-        <Preference
-            android:title="@string/device_osprey"
-            android:summary="@string/device_osprey_description"
-            android:icon="@drawable/ic_devs_phone">
-	<intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/althafvly" />
-        </Preference>
 
         <!--POCO-->
-        <Preference
-            android:title="@string/device_beryllium"
-            android:summary="@string/device_beryllium_description"
-            android:icon="@drawable/ic_devs_phone">
-	<intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/althafvly" />
-        </Preference>
 
         <Preference
             android:title="@string/device_miatoll"
@@ -209,6 +193,17 @@
             android:data="https://t.me/kalmin06" />
         </Preference>
 
+        <!-- Realme -->
+
+        <Preference
+            android:title="@string/device_rmx1971"
+            android:summary="@string/device_rmx1971_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/JBONDO7" />
+        </Preference>
+
         <!-- Xiaomi -->
         <Preference
             android:title="@string/device_jasmine_sprout"
@@ -235,6 +230,15 @@
 	<intent
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/id1otina" />
+        </Preference>
+
+        <Preference
+            android:title="@string/device_perseus"
+            android:summary="@string/device_perseus_description"
+            android:icon="@drawable/ic_devs_phone">
+	<intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/mickenkng" />
         </Preference>
 
 </PreferenceCategory>
