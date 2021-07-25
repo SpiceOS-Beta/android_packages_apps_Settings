@@ -60,4 +60,12 @@
         android:entryValues="@array/lockscreen_charging_animation_values"
         android:defaultValue="1" />
 
+    <!--Hide powermenu on lockscreen-->
+    <com.spiceos.settings.preferences.GlobalSettingSwitchPreference
+        android:key="lockscreen_enable_power_menu"
+        android:icon="@drawable/ic_power"
+        android:title="@string/lockscreen_enable_power_menu_title"
+        android:summary="@string/lockscreen_enable_power_menu_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>

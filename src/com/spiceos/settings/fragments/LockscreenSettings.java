@@ -63,6 +63,12 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
         return MetricsProto.MetricsEvent.SPICEOS_SETTINGS;
     }
 
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.Global.putInt(resolver,
+                Settings.Global.LOCKSCREEN_ENABLE_POWER_MENU, 1);
+    }
+
     @Override
     public void onResume() {
         super.onResume();

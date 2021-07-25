@@ -435,4 +435,8 @@
       <string name="screenshot_compression_title">Screenshot quality</string>
       <string name="screenshot_compression_summary">Compress screenshot size with loss in image quality</string>
 
+      <!-- Power menu on secure lockscreen -->
+      <string name="lockscreen_enable_power_menu_title">Power menu</string>
+      <string name="lockscreen_enable_power_menu_summary">Allow accessing power menu on secure lockscreen</string>
+
 </resources>
