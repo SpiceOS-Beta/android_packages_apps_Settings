@@ -23,6 +23,7 @@ import android.os.Bundle;
 import androidx.preference.SwitchPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import android.os.UserHandle;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
@@ -65,10 +66,10 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
-        Settings.Global.putInt(resolver,
-                Settings.Global.LOCKSCREEN_ENABLE_POWER_MENU, 1);
-        Settings.Global.putInt(resolver,
-                Settings.Global.LOCKSCREEN_POWERMENU_SECURE, 0);         
+        Settings.System.putIntForUser(resolver,
+                Settings.System.LOCKSCREEN_ENABLE_POWER_MENU, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.LOCKSCREEN_POWERMENU_SECURE, 0, UserHandle.USER_CURRENT);
     }
 
     @Override
