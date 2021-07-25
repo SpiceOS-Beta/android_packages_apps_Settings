@@ -431,4 +431,8 @@
       <string name="lockscreen_charging_animation_explosion">Explosion</string>
       <string name="lockscreen_charging_animation_water">Water</string>
 
+      <!-- Screenshot compression  -->
+      <string name="screenshot_compression_title">Screenshot quality</string>
+      <string name="screenshot_compression_summary">Compress screenshot size with loss in image quality</string>
+
 </resources>
